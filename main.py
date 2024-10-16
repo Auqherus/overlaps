@@ -37,3 +37,11 @@ class Rectangle:
 
     def __repr__(self):
         return f"Rectangle({self.__x1}, {self.__y1}, {self.__x2}, {self.__y2})"
+
+
+"""
+self.get_left_x() <= rect.get_right_x(): The left edge of this rectangle is at or to the left of the other's right edge.
+self.get_right_x() >= rect.get_left_x(): The right edge of this rectangle is at or to the right of the other's left edge.
+self.get_top_y() >= rect.get_bottom_y(): The top edge of this rectangle is at or above the other's bottom edge.
+self.get_bottom_y() <= rect.get_top_y(): The bottom edge of this rectangle is at or below the other's top edge.
+"""
