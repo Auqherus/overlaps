@@ -1,11 +1,11 @@
 class Rectangle:
     def overlaps(self, rect):
-
-        if self.get_left_x() > rect.get_right_x() or self.get_right_x() < rect.get_left_x():
-            return False
-        elif self.get_top_y() < rect.get_bottom_y() or self.get_bottom_y() > rect.get_top_y():
-            return False
-        return True
+        return (self.get_left_x() <= rect.get_right_x() 
+                and self.get_right_x() >= rect.get_left_x() 
+                and self.get_top_y() >= rect.get_bottom_y() 
+                and self.get_bottom_y() <= rect.get_top_y()
+               )
+            
 
     # don't touch below this line
 
@@ -37,6 +37,7 @@ class Rectangle:
 
     def __repr__(self):
         return f"Rectangle({self.__x1}, {self.__y1}, {self.__x2}, {self.__y2})"
+
 
 
 """
